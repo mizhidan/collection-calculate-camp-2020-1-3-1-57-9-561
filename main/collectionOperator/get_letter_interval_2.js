@@ -4,9 +4,9 @@ function get_letter_interval_2(number_a, number_b) {
   } else if(number_a < number_b) {
     getGrowLetter(number_a,number_b);
   } else if(number_a < 26) {
-    return String.fromCharCode(number_a);
+    return [String.fromCharCode(number_a)];
   } else {
-    return String.fromCharCode(96 + number_a / 26) + String.fromCharCode(96 + number_a % 26);
+    return [String.fromCharCode(96 + number_a / 26) + String.fromCharCode(96 + number_a % 26)];
   }
 }
 
