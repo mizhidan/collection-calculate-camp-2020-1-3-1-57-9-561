@@ -1,8 +1,8 @@
 function get_letter_interval_2(number_a, number_b) {
   if(number_a > number_b) {
-    getDecreaseLetter(number_a,number_b);
+    return getDecreaseLetter(number_a,number_b);
   } else if(number_a < number_b) {
-    getGrowLetter(number_a,number_b);
+    return getGrowLetter(number_a,number_b);
   } else if(number_a < 26) {
     return [String.fromCharCode(number_a)];
   } else {
@@ -33,7 +33,6 @@ function getGrowLetter(number_a,number_b) {
         }
       }
     }
-
   } else {
     for (let index = 0; index < number_b - number_a;) {
       charCollection.push(String.fromCharCode(number_a))
